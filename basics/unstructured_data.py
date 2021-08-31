@@ -20,3 +20,4 @@ data['body_text_tolkenized'] = data['body_text_clean'].apply(lambda x: tokenize(
 # Remove stopwords
 stopword = nltk.corpus.stopwords.words('english')
 def remove_stopwords(tokenized_)
+g

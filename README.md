@@ -24,5 +24,7 @@ Using vocabulary analysis of words aiming to remove inflectional endings to retu
     - Stemming is typically faster as it simply chops off the end of a word using heuristics, without any understanding of the context in which a word is used.
     - Lemmatizing is typically more accurate as it uses more informed analysis to create groups of words with similar meaning based on the context aroud the word.
 
-## Vectorize
-Is about converting to numeric form
+## Vectorizing
+Process of encoding text as integers to create feature vectors.
+
+> __*Feature vector:*__ An n-dimensional vector of numerical features that represent some object.

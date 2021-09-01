@@ -59,6 +59,21 @@ Raw text needs to be converted to numbers so that Python and the algorithms used
 - Percentage of characters that are capitalized
 
 #### Transformations
-- Power transformations (square, square root, etc.)
-- Standardizing data
-- 
+> Process that alters each data point in a certain column in a systematic way
+- __Power transformations__ (e.g., $-x^2$, $√{x}$)
+    - _Transformation Process_
+        1. Determine what range of exponents to test.
+        2. Apply each transformation to each value of your chosen feature.
+        3. Use some criteria to determine which of the transformations yield the best distribution.
+    - _Box-Cox Power Transformations_  (Base Form: $y^x$)
+        |X|Base Form| Transformation|
+        ---|---|---
+        |-2|$y^-2$|$\frac{1}{y²}$|
+        |-1|$y^-1$|$\frac{1}{y}$|
+        |-0.5|$y^-1/2$|$\frac{1}{√y}$|
+        |0|$y^0$|$log(y)$|
+        |0.5|$y^1/2$|$√y$|
+        |1|$y^1$|$y$|
+        |2|$y^2$|$y²$|
+
+- __Standardizing data__

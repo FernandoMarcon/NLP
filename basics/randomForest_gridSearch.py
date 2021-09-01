@@ -29,25 +29,25 @@ X_tfidf = tfidf_vect.fit_transform(data['body_text'])
 X_features = pd.concat([data['body_len'], data['punct%'], pd.DataFrame(X_tfidf.toarray())], axis=1)
 X_features.head()
 
-#--- Random Forest through Holdout Test Set
+#--- Random Forest through Grid-search
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.model_selection import train_test_split
 
+# Build our own Grid-search
 X_train, X_test, y_train, y_test = train_test_split(X_features, data['label'], test_size=0.2)
 
-rf = RandomForestClassifier(n_estimators=50, max_depth=20, n_jobs=-1)
-rf_model = rf.fit(X_train, y_train)
+def train_RF(n_est, depth):
+    rf = RandomForestClassifier(n_estimators=n_est, max_depth=depth, n_jobs=-1)
+    rf_model = rf.fit(X_train, y_train)
+    y_pred = rf_model.predict(X_test)
+    precision, recall, fscore, support = score(y_test, y_pred, pos_label='spam', average='binary')
+    print("""Est: {} / Depth:{}\t---\tPrecision: {}\tRecall: {}\tAccuracy: {}""".format(n_est, depth,
+                                                            round(precision, 3),
+                                                            round(recall, 3),
+                                                            round((y_pred == y_test).sum() / len(y_pred),3)))
 
-features_importance = pd.DataFrame(sorted(zip(rf_model.feature_importances_, X_train.columns), reverse=True),columns=['importance','features'])
-features_importance.head()
-
-y_pred = rf_model.predict(X_test)
-precision, recall, fscore, support = score(y_test, y_pred, pos_label = 'spam', average='binary')
-
-print('''Recall: {}% of all spam that has come into your email was properly placed in the spam folder.
-Precision: {}% of the mails in the spam folder is actually spam.
-Accuracy: {}% of emails that have come into your email were correctly identified as spam or ham.
-'''.format(round(recall * 100, 2),
-            round(precision * 100, 3),
-            round((y_pred == y_test).sum() / len(y_pred) * 100, 2)))
+for n_est in [10,50,100]:
+    for depth in [10,20,30,None]:
+        train_RF(n_est, depth)
+    print()

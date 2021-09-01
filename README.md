@@ -115,5 +115,33 @@ $$Recall = \frac{\#\ predicted\ as\ spam\ that\ are\ actually\ spam}{total\ \#\ 
 - Less likely to overfit
 - Outputs feature importance
 
+> Grid-search: Exhaustively search all paramenters combinations in a given grid to determine the best model
+
+> Cross-validation: Divide a dataset into k subsets and repeat the holdout method k times where a different subset is used as the holdout set in each iteration.
+
+#### Gradient Boosting
+> Ensemble learning method that takes an iterative approach to combining wak learners to create a strong learner by focusing on mistakes of prior iterations
+
+Trade-offs of Gradient Boosting
+- _Pros_
+    - Extremely powerful
+    - Accepts various types of inputs
+    - Can be used for classification or regression
+    - Outputs feature importance
+- _Cons_
+    - Longer to train (can't parallize)
+    - More likely to overfit
+    - More difficult to properly tune
+
+#### Random Forest vs. Gradient Boosting
+Both are ensemble methods based on decision tress.
+|Random Forest|Gradient Boosting|
+--- | ---
+|Bagging|Boosting|
+|Training done in parallel|Training done iteratively|
+|Unweighted voting for final prediction|Weighted voting for final prediction|
+|Easier to tune, harder to overfit|Harder to tune, easier to overfit|
+
+
 ## Souces
 - [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

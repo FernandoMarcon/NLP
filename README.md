@@ -32,6 +32,8 @@ Raw text needs to be converted to numbers so that Python and the algorithms used
 
 > __*Feature vector:*__ An n-dimensional vector of numerical features that represent some object.
 
+Vectorizers should be fit on the training set and only be used to transform the test set.
+
 ### Types
 - __Count vectorization__
 - __N-grams__
@@ -143,6 +145,12 @@ Both are ensemble methods based on decision tress.
 |Unweighted voting for final prediction|Weighted voting for final prediction|
 |Easier to tune, harder to overfit|Harder to tune, easier to overfit|
 
+## Model Selection
+### Process
+1. Split the data into training and test set.
+2. Train vectorizers on training set and use that to transform test set.
+3. Fit best random forest model and best gradient boosting model on training set and predict on test set.
+4. Thoroughly evaluate results of these two models to select best model
 
 ## Souces
 - [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

@@ -152,5 +152,15 @@ Both are ensemble methods based on decision tress.
 3. Fit best random forest model and best gradient boosting model on training set and predict on test set.
 4. Thoroughly evaluate results of these two models to select best model
 
+__Further evaluation__:
+    - Slice test set
+    - Examine text messages the model is getting wrong
+
+__Results trade-off__: consider business context
+    - Is predict time of 0.213 vs. 0.135 going to create a bottleneck?
+    - Precision/recall
+        + Spam filter - optimize for precision
+        + Antivirus software - optimize for recall  
+
 ## Souces
 - [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

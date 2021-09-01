@@ -77,3 +77,43 @@ Raw text needs to be converted to numbers so that Python and the algorithms used
         |2|$y^2$|$y²$|
 
 - __Standardizing data__
+
+## Machine Learning
+
+> "The field of study that gives computers the ability to learn without being explicitly programmed." (Arthur Samuel, 1959)
+
+> "A computer program is said to learn from experience E with respect to some task T and som performance measure P, if its performance on T, as measured by P, improves with experience E." (Tom Mitchell, 1998)
+
+> "Algorithms that 'can figure out how to perform important tasks by generalizing from examples'" (University of Washington, 2012)
+
+> "Practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something in the world" (NVIDIA, 2016)
+
+Two Broad Types of Machine Learning:
+> _Supervised Learning_: Inferring a function from labeled training data to make predictions on unseen data
+
+> _Unsupervised Learning_: Deriving structure from data where we don't know the effect of any of the variables
+
+
+### Holdout Test Set
+Sample of data not used in fitting a model for the purpuse of evaluating the model's ability to generalize unseen data
+
+> **_K_-Fold Cross-Validation**: The full data set is divided into _k_-subsets and the holdout method is repeated _k_ times. Each time, one of the _k_-subsets is used as the test set and the other _k_-1 subsets are put together to be used to train the model.
+
+### Evaluation Metrics
+$$Accuracy = \frac{\#  predicted\ correctly}{total\ \#\ of\ observations}$$
+$$Precision = \frac{\#\ predicted\ as\ spam\ that\ are\ actually\ spam}{total\ \#\ predicted\ as\ spam}$$
+$$Recall = \frac{\#\ predicted\ as\ spam\ that\ are\ actually\ spam}{total\ \#\ that\ are\ actually\ spam}$$
+
+### Ensemble Method
+> Techinique that creates multiple models and then combines them to produce better results than any of the single models individually.
+
+#### Random Forest
+> Ensemble learning method that constructs a collection of decision tress and then aggregates the predictions of each tree to determine the final prediction
+- Can be used for classification or regression
+- Easily handles outliers, missing values, etc.
+- Accepts various types of inputs (continuous, ordinal,etc.)
+- Less likely to overfit
+- Outputs feature importance
+
+## Souces
+- [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

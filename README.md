@@ -6,6 +6,7 @@ The core component of Natural Language Processing (NLP) is extracting informatio
 3. Clean text - remove stop words/ponctuation, stemming, etc.
 4. Vectorize - convert to numeric form
 5. Machine Learning algorithm - fit/train model
+6. Model Selection
 
 ## Unstructured Data
 Binary data, no delimiters, no indication of rows

@@ -157,10 +157,11 @@ __Further evaluation__:
     - Examine text messages the model is getting wrong
 
 __Results trade-off__: consider business context
+
     - Is predict time of 0.213 vs. 0.135 going to create a bottleneck?
     - Precision/recall
         + Spam filter - optimize for precision
-        + Antivirus software - optimize for recall  
+        + Antivirus software - optimize for recall
 
 ## Souces
 - [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

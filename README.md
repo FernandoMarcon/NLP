@@ -174,10 +174,29 @@ __Results trade-off__: consider business context
         + Spam filter - optimize for precision
         + Antivirus software - optimize for recall
 
-## word2vec
+## Embeddings
+### word2vec
 > is a shallow, two-layer neural network that accepts a text corpus as an input, and it returns a set of vectors (also known as embeddings); each vector is a numeric representation of a given word.
 
 > "You shall know a word by the company it keeps."
+
+- `gensim` package pre-trained Embeddings:
+    - glove-twitter-{25/50/100/200}
+    - glove-wiki-gigaword-{50/200/300}
+    - word2vec-google-news-300
+    - word2vec-ruscorpora-news-300
+
+### doc2vec
+> is a shallow, two-layer neural network that accepts a text corpus as an input, and it returns a set of vectors (aka embeddings); each vector is a numeric representation of a given sentence, paragraph, or document.
+
+__Pre-trained Document Vectors__
+    There are not as many options as there are for word vectors. There also is not an easy API to read these in like there is for `word2vec` so it is more time consuming.
+
+    Pre-trained vectors from training on Wikipedia and Associated Press News can be found [here](https://github.com/jhlau/doc2vec).
+
+
+
+
 
 ## Souces
 - [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

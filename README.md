@@ -194,9 +194,8 @@ __Pre-trained Document Vectors__
 
     Pre-trained vectors from training on Wikipedia and Associated Press News can be found [here](https://github.com/jhlau/doc2vec).
 
-
-
-
+## Recurrent Neural Network
+> Pattern matching through the connection of many very simple functions to create one very powerful functino; __this functin has an understanding of the data's sequential nature (using feedback loops that form a sense of memory)__
 
 ## Souces
 - [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)

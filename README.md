@@ -200,3 +200,4 @@ __Pre-trained Document Vectors__
 ## Souces
 - [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)
 - [Advanced NLP with Python for Machine Learning (LinkedIn)](https://www.linkedin.com/learning/advanced-nlp-with-python-for-machine-learning/what-you-should-know)
+- [ Processing Text with Python Essential Training (LinkedIn)](https://www.linkedin.com/learning/processing-text-with-python-essential-training/the-need-for-text-mining-skills-in-data-science)

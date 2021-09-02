@@ -71,6 +71,7 @@ history = model.fit(X_train_seq_padded, y_train, batch_size=32, epochs=10, valid
 
 # Plot the evaluation metrics by each epoch for the model to see if we are over or underfitting
 import matplotlib.pyplot as plt
+plt.rcParams["figure.figsize"]=20,20
 
 for i in ['accuracy','precision_m','recall_m']:
     acc = history.history[i]

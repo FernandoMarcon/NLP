@@ -65,3 +65,22 @@ Model Building and Evaluation
 
 word2vec
 doc2vec
+
+
+
+
+
+# Read in and clean data
+read_data
+
+
+Data Cleaning:
+    remove_punctuation >> clean_text
+    tokenize >> clean_text
+    remove_stopwords >> clean_text
+
+# Split data into train and test set
+clean_text - train_test_split - X_train
+clean_text - train_test_split - X_test
+clean_text - train_test_split - y_train
+clean_text - train_test_split - y_test

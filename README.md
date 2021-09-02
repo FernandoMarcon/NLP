@@ -2,6 +2,20 @@
 
 The core component of Natural Language Processing (NLP) is extracting information from human language.
 
+the need to analyze and understand text data is growing everyday.
+More and more data generated today is free text
+- Web: blogs, comments, reviews, notes
+- Social media: messages, hastags, references
+- Operations: logs, trails
+- Emails
+- Voice transcriptions
+
+Volume and lack of structure provide additional challenges to acquire, process, and analyze text.
+
+> __*Document*__: A collection of sentences that represent a specific fact or entity.
+
+> __*Copus*__: a collection of similar documents
+
 ## Main Application Topics
 - Sentiment analysis
 - Topic modeling
@@ -20,12 +34,32 @@ The core component of Natural Language Processing (NLP) is extracting informatio
 ## Unstructured Data
 Binary data, no delimiters, no indication of rows
 
+## Cleansing Text
+- Formatting and standardization (e.g., dates)
+- Remove punctuation
+- Remove abbreviations
+- Case conversion
+- Remove elements like hashtags
+
+## Stop-word Removal
+> A group of words that carry no meaning by themselvs (in, and, the which)
+- Not required for analytics
+- A standard or custom stop-words dictionary can be used.
+
 ## Stemming
+> A stem is the base parte of the word, to which affixes can be attached for derivatives.
+
+Stemming keeps only the base word, thus reducing the total words in the corpus.
+
 Though they may have different affixes, words that share the same stem have similar semantic meaning. Stemming is able to determine that 'learned' and 'learning' , though they have different affixes, each contain the same root word 'learn'.
 - Reduces the corpus of words the model is exposed to
 - Explicitly correlates words with similar meanings
 
 # Lemmatizing
+> Similar to stemming, but produces a proper root word that belongs to the language
+
+Uses a dictionary to match words to their root word
+
 Process of grouping together the inflected forms of a word so they can be analyzed as a single term, identified by the word's lemma.
 Using vocabulary analysis of words aiming to remove inflectional endings to return the dictionary form of a word
 
@@ -33,6 +67,17 @@ Using vocabulary analysis of words aiming to remove inflectional endings to retu
 - To goal of both is to condense derived words into their base forms
     - Stemming is typically faster as it simply chops off the end of a word using heuristics, without any understanding of the context in which a word is used.
     - Lemmatizing is typically more accurate as it uses more informed analysis to create groups of words with similar meaning based on the context aroud the word.
+
+## Parts-of_Speech (POS) Tagging
+- POS tagging involves identifying the part of speech for each word in a corpus
+- Used for entity recognition, filtering, and sentiment analysis
+- Parts of speech tagging are used by chatbots to understand natural language and sentiments.
+
+|Word|POS|Description|
+--- | --- | ---
+|Man|NN|Noun|
+|Engage|VBP|Verb Singular Present|
+|Top|JJ|Adjective|
 
 ## Vectorization
 Raw text needs to be converted to numbers so that Python and the algorithms used for machine learning can understand.
@@ -197,7 +242,26 @@ __Pre-trained Document Vectors__
 ## Recurrent Neural Network
 > Pattern matching through the connection of many very simple functions to create one very powerful functino; __this functin has an understanding of the data's sequential nature (using feedback loops that form a sense of memory)__
 
+## Best Practices
+### Storing Text Data
+- Use suitable free-format big-data storage for text (HDFS, S3, or Google Cloud Storage)
+- Create indexes on key data elements for easy access (MongoDB, Elasticsearch)
+- Store processd text like tokens and TF-IDF
+
+### Processing text data
+- Filter text as early as possible in the processing cycle
+- Use an exhaustive and context-specific stop-word list
+- Identify domain-specific data for special use
+- Eliminate data with low frequency
+- Build a clean and indexed corpus
+
+### Scalable processing of text data
+- Use technologies that allow parallel access and storage (Kafka, HDFS, MongoDB, and so on)
+- Oricess eachg document independently with map() functions (in Hadoop or Apache Spark)
+- Use reduce() functions late in the processing cycle
+
 ## Souces
 - [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)
 - [Advanced NLP with Python for Machine Learning (LinkedIn)](https://www.linkedin.com/learning/advanced-nlp-with-python-for-machine-learning/what-you-should-know)
 - [ Processing Text with Python Essential Training (LinkedIn)](https://www.linkedin.com/learning/processing-text-with-python-essential-training/the-need-for-text-mining-skills-in-data-science)
+- [ Text Analytics and Predictions with Python Essential Training (LinkedIn)](https://www.linkedin.com/learning/text-analytics-and-predictions-with-python-essential-training/the-need-for-text-mining-skills-in-data-science)

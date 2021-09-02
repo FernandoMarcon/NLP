@@ -153,8 +153,10 @@ Both are ensemble methods based on decision tress.
 4. Thoroughly evaluate results of these two models to select best model
 
 __Further evaluation__:
+
     - Slice test set
     - Examine text messages the model is getting wrong
+
 
 __Results trade-off__: consider business context
 
@@ -164,4 +166,5 @@ __Results trade-off__: consider business context
         + Antivirus software - optimize for recall
 
 ## Souces
-- [NLP with Python for Machine Learning Essential Training  (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)
+- [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)
+- [Advanced NLP with Python for Machine Learning (LinkedIn)](https://www.linkedin.com/learning/advanced-nlp-with-python-for-machine-learning/what-you-should-know)

@@ -1,4 +1,13 @@
+# Natural Language Processing
+
 The core component of Natural Language Processing (NLP) is extracting information from human language.
+
+## Main Application Topics
+- Sentiment analysis
+- Topic modeling
+- Text classification
+- Sentence segmentation or part-of-speech tagging
+- ...
 
 ## General Pipeline
 1. Raw text
@@ -164,6 +173,11 @@ __Results trade-off__: consider business context
     - Precision/recall
         + Spam filter - optimize for precision
         + Antivirus software - optimize for recall
+
+## word2vec
+> is a shallow, two-layer neural network that accepts a text corpus as an input, and it returns a set of vectors (also known as embeddings); each vector is a numeric representation of a given word.
+
+> "You shall know a word by the company it keeps."
 
 ## Souces
 - [NLP with Python for Machine Learning Essential Training (LinkedIn)](https://www.linkedin.com/learning/nlp-with-python-for-machine-learning-essential-training/)
